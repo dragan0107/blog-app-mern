@@ -7,6 +7,7 @@
     display: flex;
     align-items: center;
     font-family: "Josefin Sans", sans-serif;
+    z-index: 1;
 }
 
 .topLeft,
@@ -45,7 +46,7 @@
 
 .topListItem {
     margin-right: 20px;
-    font-size: 20px;
+    font-size: 24px;
     font-weight: 300;
     cursor: pointer;
 }
