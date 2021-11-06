@@ -5,23 +5,27 @@ import Posts from '../../components/posts/Posts'
 import Sidebar from '../../components/sidebar/Sidebar'
 import axios from 'axios';
 import './home.css'
+import { useLocation } from 'react-router'
 
 export default function Home() {
     const [posts,setPosts] = useState([]);
+    const {search} = useLocation();
+
 
     useEffect(()=> {
 
         const fetchPosts = async () => {
-           const res = await axios.get("/posts");
+           const res = await axios.get(`/posts/${search}`);
            setPosts(res.data)
            
         }
         fetchPosts();
-    },[]) //array parameter means it will run just once
+    },[search]) // On the change of search, the function will run again.
     return (
         <>
         <Header/>
         <div className="home">
+           {posts.length===0 && <h1 className="noPosts">No posts for the selected category. </h1>}
             <Posts inputPosts={posts}/>
             <Sidebar/>
         </div>

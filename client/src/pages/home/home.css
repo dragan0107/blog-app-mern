@@ -1,3 +1,8 @@
 .home {
     display: flex;
 }
+
+.noPosts {
+    font-family: 'Josefin Sans', sans-serif;
+    margin: 3%;
+}
