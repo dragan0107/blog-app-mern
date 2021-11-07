@@ -60,3 +60,10 @@
     border-radius: 10px;
     font-size: 16px;
 }
+
+.errorNot {
+    margin-top: 5px;
+    font-size: 18px;
+    font-weight: 500;
+    color: rgb(228, 22, 22);
+}
