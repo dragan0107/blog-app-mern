@@ -32,33 +32,23 @@ export default function Register() {
             <form action="" className="registerForm" onSubmit={handleSubmit}>
                 <label htmlFor="">Username</label>
                 <input type="text" placeholder="Enter your username." className="registerInput" autoFocus="true"
-                    onChange={(e)=> {
-                        setUsername(e.target.value);
-                        console.log(username)
-                        }}
+                    onChange={(e)=> setUsername(e.target.value)}
                 />
                 <label htmlFor="">Email</label>
                 <input type="text" placeholder="Enter your email." className="registerInput"
-                    onChange={(e)=> {
-                        setEmail(e.target.value);
-                        console.log(email)
-                    }}
+                    onChange={(e)=> setEmail(e.target.value)}
                 />
                 <label htmlFor="">Password</label>
                 <input type="password" placeholder="Enter your password." className="registerInput"
-                    onChange={(e)=> {
-                        setPassword(e.target.value)
-                        console.log(password)
-                        }}
+                    onChange={(e)=> setPassword(e.target.value)}
                 />
                 <button className="registerButton">
                     <Link class="link" to="/register"></Link>
                     Register
                 </button>
             </form>
-            <button className="registerLoginButton">
-                    <Link class="link" to="/login">Log in</Link>
-            </button>
+            <Link class="link" to="/login"><button className="registerLoginButton">Log in</button></Link>
+            
             {error===true && <span className="errorNot">Something went wrong...</span>}
         </div>
     )

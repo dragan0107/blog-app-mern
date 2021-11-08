@@ -13,9 +13,10 @@ export default function Login() {
                 <input type="password" placeholder="Enter your password." className="loginInput"/>
                 <button className="loginButton">Login</button>
             </form>
-                <button className="loginRegisterButton">
-                    <Link class="link" to="/register">Register</Link>
-                </button>
+                    <Link class="link" to="/register">
+                        <button className="loginRegisterButton">Register</button>
+                    </Link>
+                
         </div>
     )
 }
