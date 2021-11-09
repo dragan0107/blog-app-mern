@@ -19,7 +19,7 @@ export default function Register() {
             email: email,
             password: password
         });
-        res.data && window.location.replace('/login');
+        res.data && window.location.replace('/login'); // redirect to login page after registering
     } catch(err) {
         setError(true);
     }
