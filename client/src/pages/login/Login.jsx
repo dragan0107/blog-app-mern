@@ -8,7 +8,7 @@ export default function Login() {
     const userRef = useRef();
     const passwordRef = useRef();
 
-    const { dispatch, isFetching } = useContext(Context);
+    const { dispatch, isFetching } = useContext(Context); // we get access to dispatch and is fetching from our context
 
     const handleSubmit = (e) => {
         e.preventDefault();

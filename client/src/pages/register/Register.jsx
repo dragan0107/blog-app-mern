@@ -32,14 +32,14 @@ export default function Register() {
             <form action="" className="registerForm" onSubmit={handleSubmit}>
                 <label htmlFor="">Username</label>
                 <input type="text" placeholder="Enter your username." className="registerInput" autoFocus="true"
-                    onChange={(e)=> setUsername(e.target.value)}
+                    onChange={(e)=> setUsername(e.target.value)} required
                 />
                 <label htmlFor="">Email</label>
-                <input type="text" placeholder="Enter your email." className="registerInput"
-                    onChange={(e)=> setEmail(e.target.value)}
+                <input type="email" placeholder="Enter your email." className="registerInput"
+                    onChange={(e)=> setEmail(e.target.value)} required
                 />
                 <label htmlFor="">Password</label>
-                <input type="password" placeholder="Enter your password." className="registerInput"
+                <input type="password" minlength="6" required placeholder="Enter your password." className="registerInput"
                     onChange={(e)=> setPassword(e.target.value)}
                 />
                 <button className="registerButton">
