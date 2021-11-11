@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useContext, useEffect } from 'react'
 import { useState } from 'react'
 import Header from '../../components/header/Header'
 import Posts from '../../components/posts/Posts'
@@ -6,8 +6,10 @@ import Sidebar from '../../components/sidebar/Sidebar'
 import axios from 'axios';
 import './home.css'
 import { useLocation } from 'react-router'
+import { Context } from '../../context/Context'
 
 export default function Home() {
+
     const [posts,setPosts] = useState([]);
     const [noPosts,setNoPosts] = useState(false);
     const {search} = useLocation();

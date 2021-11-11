@@ -2,19 +2,31 @@ import React, { useContext, useRef } from 'react'
 import { Link } from 'react-router-dom'
 import { Context } from '../../context/Context';
 import './login.css'
+import axios from 'axios';
 
 export default function Login() {
 
     const userRef = useRef();
     const passwordRef = useRef();
 
-    const { dispatch, isFetching } = useContext(Context); // we get access to dispatch and is fetching from our context
+    const { user, dispatch, isFetching } = useContext(Context); // we get access to dispatch and is fetching from our context
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
-        dispatch({type: "LOGIN_START"})
-    }
+        dispatch({type: "LOGIN_START"});
 
+        try {
+            const res = await axios.post('/auth/login',{
+                username: userRef.current.value,
+                password: passwordRef.current.value
+            });
+            dispatch({type: "LOGIN_SUCCESS", payload: res.data});
+
+        } catch (err){ 
+            dispatch({type: "LOGIN_FAILURE"});
+        }
+    }
+console.log(user);
     return (
         <div className="login">
         <span className="loginTitle">Log In</span>
