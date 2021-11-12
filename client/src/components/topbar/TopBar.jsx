@@ -1,9 +1,11 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { Link } from "react-router-dom";
+import { Context } from '../../context/Context';
 import "./topbar.css";
 
 export default function TopBar() {
-  const user = false;
+  const { user } = useContext(Context);
+  // console.log(user);
   return (
     <div className="top">
       <div className="topLeft">
@@ -31,7 +33,7 @@ export default function TopBar() {
       </div>
       <div className="topRight">
       {
-        user ? (<img className="topImg" src="https://static-cdn.jtvnw.net/jtv_user_pictures/1d5e6a4e-c7e1-4009-8a54-b7d9125d17a9-profile_image-70x70.png" alt="" />)
+        user ? (<img className="topImg" src={user.user.profilePic} alt="" />)
         : (
           <ul className="topList">
             <li className="topListItem">

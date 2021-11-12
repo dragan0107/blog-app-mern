@@ -47,6 +47,11 @@
     font-size: 16px;
 }
 
+.loginButton:disabled {
+    cursor: not-allowed;
+    background-color: rgb(245, 185, 185);
+}
+
 .loginRegisterButton {
     position: absolute;
     top: 60px;

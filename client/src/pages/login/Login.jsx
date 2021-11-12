@@ -39,7 +39,7 @@ console.log(user);
                 <input type="password" placeholder="Enter your password." className="loginInput"
                     ref={passwordRef}
                 />
-                <button className="loginButton" type="submit">Login</button>
+                <button className="loginButton" type="submit" disabled={isFetching}>Login</button> 
             </form>
                     <Link class="link" to="/register">
                         <button className="loginRegisterButton">Register</button>
