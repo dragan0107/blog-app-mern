@@ -11,6 +11,7 @@ dotenv.config();
 const mongoose = require('mongoose');
 
 app.use(express.json());
+app.use('/images', express.static(`${__dirname}/images`));
 
 mongoose.connect(process.env.MONGO_URL)
     .then(console.log('Successfully connected to the database.'))

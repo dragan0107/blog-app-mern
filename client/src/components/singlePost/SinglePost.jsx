@@ -2,11 +2,13 @@ import './singlePost.css';
 import React from 'react'
 import { Link } from 'react-router-dom';
 export default function SinglePost({post}) { //Destructuring the props obj
+
+    const PF = "http://localhost:5000/images/"
     return (
         <div className="singlePost">
             <div className="singlePostWrapper">
             {post.photo && 
-                <img src={post.photo} alt="" className="singlePostImg" />
+                <img src={PF+post.photo} alt="" className="singlePostImg" />
             }
                 <h1 className="singlePostTitle">{post.title}
                     <div className="singlePostEdit">
