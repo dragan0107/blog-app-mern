@@ -5,7 +5,7 @@ export default function Post({post}) {
     return (
         <div className="post">
         {post.photo &&
-            <img className="postImg" src="https://www.fodors.com/wp-content/uploads/2018/06/Greece-Best-Beaches-Hero.jpg" alt="" />
+            <img className="postImg" src={post.photo} alt="" />
         }
             <div className="postInfo">
                 <div className="postCats">

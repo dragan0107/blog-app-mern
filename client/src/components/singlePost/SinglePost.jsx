@@ -6,7 +6,7 @@ export default function SinglePost({post}) { //Destructuring the props obj
         <div className="singlePost">
             <div className="singlePostWrapper">
             {post.photo && 
-                <img src="https://www.telegraph.co.uk/content/dam/Travel/Destinations/Africa/Mauritius/Mauritius---Beaches---Tropical-beach.jpg" alt="" className="singlePostImg" />
+                <img src={post.photo} alt="" className="singlePostImg" />
             }
                 <h1 className="singlePostTitle">{post.title}
                     <div className="singlePostEdit">
