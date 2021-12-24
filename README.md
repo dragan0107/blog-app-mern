@@ -7,6 +7,8 @@
 - Users can edit and delete their posts.
 
 
+
+
 ### Application screenshots: 
 
 ![Screenshot_1](https://user-images.githubusercontent.com/73792907/143724193-b047efd4-3043-43af-9204-6424a9382969.jpg)
